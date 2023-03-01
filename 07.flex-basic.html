@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex basic</title>
+
+    <style>
+        /* .container {
+            width: 800px;
+            border: 1px solid #000;
+        }
+        .row {
+            display: flex;
+        }
+        .col {
+            height: 200px;
+            font-size: 3rem;
+            border: 1px solid pink;
+        } */
+
+        .wrap {
+            border: 3px solid red;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* .wrap > div{
+            flex-basis: 300px;
+        } */
+
+        .box {
+            min-width: 150px;
+            width: 50px;
+            flex-basis: 50px;
+            /* max-width: 200px; */
+
+            height: auto;
+
+
+            /* flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 0; */
+
+            border: 1px solid yellowgreen;
+
+
+
+            font-size: 5rem;
+            background-color: blueviolet;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">box1</div>
+        <!-- <div class="box">box2</div>
+        <div class="box">b</div>
+        <div class="box">box4fa</div> -->
+    </div>
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+        </div>
+    </div> -->
+</body>
+
+</html>

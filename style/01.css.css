@@ -1,0 +1,17 @@
+/* h1.myH1 {
+    color: red;
+} */
+
+#idH1 {}
+
+.wrap>div {
+    color: blue;
+}
+
+a[href="#"] {
+    color: red;
+}
+
+.box:nth-child(6) {
+    color: darkorange;
+}

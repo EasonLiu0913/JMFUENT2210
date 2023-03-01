@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex demo</title>
+    <style>
+        .container {
+            width: 960px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col {
+            flex-basis: 0;
+            flex-grow: 1;
+            border: 1px solid red;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .nav-links {
+            height: 100%;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            height: 100%;
+
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href="#">link1</a></li>
+                            <li><a href="#">link2</a></li>
+                            <li><a href="#">link3</a></li>
+                            <li><a href="#">link4</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <h1>Alameda</h1>
+                </div>
+                <div class="col">
+                    <div class="social-icons">
+                        <i>1</i>
+                        <i>2</i>
+                        <i>3</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .flex {
+            height: 800px;
+
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            /* 單行的次軸對齊 */
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            /* 換行之後，會有多行的次軸對齊 */
+            align-content: space-around;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #faf;
+            font-size: 3rem;
+        }
+
+        .box:nth-child(2) {
+            align-self: center;
+            background-color: #ffa;
+            flex-grow: 3;
+            flex-shrink: 2;
+        }
+
+        .box:nth-child(3) {
+            order: -1;
+            background-color: #aaf;
+            flex-grow: 1;
+            flex-shrink: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box:nth-child(4) {
+            order: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+    </div>
+    <!-- <div class="flex">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div> -->
+</body>
+
+</html>
