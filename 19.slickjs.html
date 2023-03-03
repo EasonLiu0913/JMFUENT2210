@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./slick/slick-theme.css">
     <style>
         * {
-            font-size: 3rem;
+            font-size: 1rem;
         }
 
         .slick-prev:before,
@@ -29,9 +29,18 @@
 
 <body>
     <div class="your-class">
-        <div>your content 1</div>
-        <div>your content 2</div>
-        <div>your content 3</div>
+        <div class="box">your content 1</div>
+        <div class="box">your content 2</div>
+        <div class="box">your content 3</div>
+        <div class="box">your content 4</div>
+        <div class="box">your content 5</div>
+        <div class="box">your content 6</div>
+        <div class="box">your content 7</div>
+        <div class="box">your content 8</div>
+        <div class="box">your content 9</div>
+        <div class="box">your content 10</div>
+        <div class="box">your content 11</div>
+        <div class="box">your content 12</div>
     </div>
 
     <!-- jQuery -->
@@ -53,7 +62,34 @@
         // });
 
 
-        $('.your-class').slick();
+        // $('.your-class').slick();
+
+
+        $('.your-class').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
     </script>
 </body>
 
