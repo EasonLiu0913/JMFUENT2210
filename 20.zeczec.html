@@ -24,6 +24,16 @@
                 border-top: none;
             }
         }
+
+        .product {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product h3 {
+            flex-grow: 1;
+        }
     </style>
 </head>
 
@@ -79,8 +89,8 @@
 
     <main class="mb-5">
         <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 ">
-                <div class="col">
+            <div id="productRow" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 ">
+                <!-- <div class="col mb-2">
                     <div class="product">
                         <img class="w-100" src="./zeczec/imgs/1.webp" alt="">
                         <h3 class="h5">
@@ -101,7 +111,9 @@
                             <p>2,682%</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+
             </div>
         </div>
     </main>
@@ -109,6 +121,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
+
+    <script>
+        fetch('http://127.0.0.1:5500/zeczec/json/20.zeczec.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log(myJson);
+
+                const productRow = document.querySelector('#productRow')
+
+                myJson.forEach(element => {
+                    const div = document.createElement('div');
+                    div.classList.add('col', 'mb-2')
+
+                    div.innerHTML = `<div class="product">
+                        <img class="w-100" src="./zeczec/imgs/${element.img}" alt="">
+                        <h3 class="h5">
+                            ${element.title}
+                        </h3>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="h5">${element.total}</h4>
+                            <h4 class="h6">${element.support}人支持</h4>
+                        </div>
+
+                        <div class="bg-secondary bg-opacity-25 rounded-2" style="height: 6px;">
+                            <div class="bg-success rounded-2" style="width:100%;height: 100%;"></div>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <p>剩下${element.dayLeft}天</p>
+                            <p>${element.percent}</p>
+                        </div>
+                    </div>`
+
+
+                    productRow.append(div)
+                });
+            });
+    </script>
 </body>
 
 </html>
