@@ -7,14 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Slick css -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+    <link rel="stylesheet" href="./slick/slick.css">
+    <link rel="stylesheet" href="./slick/slick-theme.css">
+    <style>
+        * {
+            font-size: 3rem;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: red;
+        }
+
+        .your-class {
+            width: 50%;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
     <div class="your-class">
-        <div>your content</div>
-        <div>your content</div>
-        <div>your content</div>
+        <div>your content 1</div>
+        <div>your content 2</div>
+        <div>your content 3</div>
     </div>
 
     <!-- jQuery -->
@@ -26,6 +43,18 @@
 
     <!-- Slick js -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- 自定義該怎麼動 -->
+    <script type="text/javascript">
+        // $(document).ready(function () {
+        //     $('.your-class').slick({
+        //         setting- name: setting - value
+        //   });
+        // });
+
+
+        $('.your-class').slick();
+    </script>
 </body>
 
 </html>
