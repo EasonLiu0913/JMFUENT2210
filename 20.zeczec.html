@@ -8,6 +8,23 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        .border-md-top-0 {
+            border-top: 1px solid #ccc;
+        }
+
+
+        @media screen and (min-width:768px) {
+            .border-md-start {
+                border-left: 1px solid #ccc;
+            }
+
+            .border-md-top-0 {
+                border-top: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -40,17 +57,17 @@
                         </svg>
                     </h1>
                 </div>
-                <div class="col-auto py-3 ms-auto">
+                <div class="col-auto order-md-2 py-3 ms-auto">
                     <button class="btn btn-sm  bg-dark bg-opacity-25">登入</button>
                     <button class="btn btn-sm  bg-dark bg-opacity-25">註冊</button>
                     <button class="btn btn-sm text-primary bg-dark bg-opacity-25">Facebook登入</button>
                 </div>
-                <div class="col-12 border-top">
-                    <ul class="list-unstyled d-flex m-0">
-                        <li class="col-6 text-center py-2">
+                <div class="col-12 col-md-auto order-md-1 border-md-top-0 ">
+                    <ul class="list-unstyled d-flex m-0 h-100 align-items-center ">
+                        <li class="col-6 col-md-auto text-center py-2 py-md-1 ps-md-3 me-2 border-md-start">
                             <a class="text-decoration-none text-black" href="#">探索</a>
                         </li>
-                        <li class="col-6 text-center py-2">
+                        <li class="col-6  text-center py-2">
                             <a class="text-decoration-none text-black" href="#">提案</a>
                         </li>
                     </ul>
